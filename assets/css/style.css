@@ -14,7 +14,7 @@
   --fs-xs: 16px;
   --fs-sm: 14px;
   --fs-md: 22px;
-  --fs-lg: 15px;
+  --fs-lg: 13px;
   --fs-xl: 20px;
   --fs-xxl: 35px;
   --fs-2xl: 40px;
@@ -70,20 +70,18 @@
 .color-gray {
   color: var(--color-gray);
 }
-.bg-gray{
-    background-color: var(--color-gray);
+.bg-gray {
+  background-color: var(--color-gray);
 }
 .bg-darkgray {
   background: var(--bg-darkgray);
 }
-/* .bg-light-gray {
-  background-color: var(--light-gray);
-} */
+
 .bg-light-black {
   background: var(--light-black);
 }
-.off-gray{
-    background: var(--off-gray);
+.off-gray {
+  background: var(--off-gray);
 }
 
 .custom-container {
@@ -107,23 +105,30 @@
 .product-card {
   border-radius: 12px;
   height: 100%;
+  transition: 300ms linear;
+}
+.product-card:hover {
+  transform: translateY(-15px) ;
+  box-shadow: 0px 8px 13px 0px #000;
 }
 .customer-card {
   width: 215px !important;
   height: 170px;
   border: 1px solid #000000;
   border-radius: 8px;
+  transition: 300ms linear;
+}
+.customer-card:hover {
+  box-shadow: 0px 8px 13px 0px #000000;
 }
 .box-width {
-  width: 180px;
+  width: 160px;
 }
 
 .max-w-232 {
   max-width: 232px;
 }
-.max-w-524 {
-  max-width: 524px;
-}
+
 .text-shadow {
   text-shadow: 0px 8px 13px #000000;
 }
@@ -137,22 +142,36 @@
 .common-btn {
   background-color: var(--light-black);
   border-radius: 8px;
+  transition: 300ms linear;
+}
+.common-btn:hover {
+  background: var(--bg-darkgray);
 }
 .slider-circle {
   width: 50px;
   height: 50px;
   border-radius: 50px;
+  transition: 300ms linear;
+}
+.slider-circle:hover {
+  background-color: var(--bg-darkgray);
 }
 .coursor-pointer {
   cursor: pointer;
 }
-.circle-position {
-  position: absolute;
-  bottom: 12%;
-  left: -11%;
+
+.slick-slide {
+  margin: 0 10px;
 }
-.slick-slide{
-    margin: 0 15px;
+.footer-py {
+  padding-top: 130px;
+  padding-bottom: 130px;
+}
+.icons {
+  transition: 300ms linear;
+}
+.icons:hover {
+  transform: translateY(-10px) scale(1.2);
 }
 
 @media (max-width: 992px) {
@@ -199,17 +218,9 @@
     z-index: 4 !important;
   }
 
-  /* .w-lg-50 {
-    width: 50%;
-  } */
-
   .text-c-center {
     text-align: center;
   }
-
-  /* .max-w-img {
-    max-width: 370px !important;
-  } */
 
   .w_100 {
     width: 100%;
@@ -263,5 +274,15 @@
   }
   .box-width {
     width: 232px;
+  }
+}
+@media (min-width: 992px) {
+  .max-w-524 {
+    max-width: 524px;
+  }
+  .circle-position {
+    position: absolute;
+    bottom: 16%;
+    left: 6%;
   }
 }
