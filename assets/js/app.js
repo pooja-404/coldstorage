@@ -13,38 +13,16 @@ window.addEventListener('scroll', function () {
         backtotop.style.display = 'none'
     }
 })
+   
 
-
-// script.js
-let currentSlide = 0;
-
-function showSlide(index) {
-    const slides = document.querySelectorAll('.slide');
-    const totalSlides = slides.length;
-    
-    // Ensure the index is within the bounds
-    if (index >= totalSlides) {
-        currentSlide = 0;
-    } else if (index < 0) {
-        currentSlide = totalSlides - 1;
-    } else {
-        currentSlide = index;
-    }
-
-    // Move the slides container to show the current slide
-    const slidesContainer = document.querySelector('.slides');
-    slidesContainer.style.transform = `translateX(-${currentSlide * 100}%)`;
+// footer-date-upadte
+setTimeout(() => {
+    document.getElementById("preloader").classList.add("d-none");
+    document.getElementById("preloader").classList.add("pointer_event_none")
+    document.body.classList.remove("overflow-hidden")
 }
-
-function nextSlide() {
-    showSlide(currentSlide + 1);
-}
-
-function prevSlide() {
-    showSlide(currentSlide - 1);
-}
-
-// Optionally, add automatic sliding
-setInterval(() => {
-    nextSlide();
-}, 3000);
+    , 3000);
+let s = document.getElementById("name")
+const y = new Date()
+const year = y.getFullYear();
+s.innerHTML = "Copyright © " + year+" Spicetrix"
