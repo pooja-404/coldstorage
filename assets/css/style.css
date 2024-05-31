@@ -173,6 +173,10 @@
 .icons:hover {
   transform: translateY(-10px) scale(1.2);
 }
+.py-16 {
+  padding-top: 14px;
+  padding-bottom: 14px;
+}
 
 @media (max-width: 992px) {
   .mobile_view {
