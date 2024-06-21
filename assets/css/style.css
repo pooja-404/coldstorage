@@ -208,7 +208,7 @@
     right: -100%;
     width: 72%;
     min-height: 79vh;
-    background-color: var(--light-black);
+    background-color: var(--color-gray);
     transition: 500ms linear;
     flex-direction: column;
     justify-content: center;
