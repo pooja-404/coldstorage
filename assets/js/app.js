@@ -22,7 +22,7 @@ setTimeout(() => {
     document.body.classList.remove("overflow-hidden")
 }
     , 3000);
-let s = document.getElementById("name")
+let s = document.getElementById("foot")
 const y = new Date()
 const year = y.getFullYear();
 s.innerHTML = "Copyright © " + year+" Spicetrix"

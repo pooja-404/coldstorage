@@ -122,7 +122,6 @@
 }
 .coldstorage-card {
   box-shadow: 0px 8px 13px 0px #949292 !important;
-  background-color: var(--bg-darkgray);
   border-radius: 8px;
 }
 .features-card {
@@ -224,39 +223,31 @@
   border-radius: 12px !important;
 }
 
-.dropdown {
-  position: relative;
-  display: inline-block;
+.tabs {
+  display: flex;
+  cursor: pointer;
+  margin-bottom: 10px;
+  background: var(--light-gray);
 }
-
-.dropdown-content {
+.tabs div {
+  padding: 10px 20px;
+  border-bottom: none;
+  background-color: var(--bg-darkgray) !important;
+ 
+}
+.tabs div.active {
+  background-color: var(--light-gray) !important;
+  border-bottom: 1px solid white;
+}
+.tab-content {
+  padding: 20px;
+  background-color: white;
+}
+.tab-pane {
   display: none;
-  position: absolute;
-  background-color: #f9f9f9;
-  min-width: 160px;
-  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
-  z-index: 1;
-  border: 2px solid transparent;
 }
-
-.dropdown-content a {
-  color: black;
-  padding: 12px 16px;
-  text-decoration: none;
+.tab-pane.active {
   display: block;
-}
-
-.dropdown-content a:hover {
-  background-color: #f1f1f1;
-}
-
-.dropdown:hover .dropdown-content {
-  display: block;
-}
-
-.dropdown:hover .dropbtn {
-  background-color: #1e1f1e;
-  border-radius: 2px;
 }
 @media (max-width: 992px) {
   .mobile_view {
