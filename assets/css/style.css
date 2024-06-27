@@ -26,6 +26,7 @@
   --light-black: #323648cc;
   --off-gray: #d9d9d9;
   --green: #008000;
+  --lightgreen: #2a752a;
 
   /* ===font-family===  */
   --ff-inter: "Inter", Sans-serif;
@@ -87,6 +88,9 @@
 .off-gray {
   background: var(--off-gray);
 }
+.bg-green {
+  background-color: var(--lightgreen);
+}
 
 .custom-container {
   max-width: 1140px;
@@ -111,19 +115,41 @@
 .min-vh-70 {
   min-height: 70vh;
 }
-.value-box {
-  border-radius: 30px;
-  background-color: var(--light-gray);
-}
+
 .product-card {
   border-radius: 12px;
   height: 100%;
   transition: 300ms linear;
 }
+
 .coldstorage-card {
   box-shadow: 0px 8px 13px 0px #949292 !important;
   border-radius: 8px;
+  transition: transform 0.3s, box-shadow 0.3s;
+  overflow: hidden;
+  background-color: #70727f;
 }
+
+.coldstorage-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.2);
+}
+
+.coldstorage-card img {
+  transition: transform 0.3s;
+}
+
+.coldstorage-card:hover img {
+  transform: scale(1.1);
+}
+
+.coldstorage-card:hover .card-text {
+  transform: translateY(-10px);
+}
+.card-text {
+  transition: transform 0.3s;
+}
+
 .features-card {
   box-shadow: 0px 8px 13px 0px #949292;
   background: #008000;
@@ -155,9 +181,6 @@
 .customer-card:hover {
   box-shadow: 0px 8px 13px 0px #000000;
 }
-.box-width {
-  width: 160px;
-}
 
 .max-w-232 {
   max-width: 232px;
@@ -177,6 +200,12 @@
   background-color: var(--light-black);
   border-radius: 8px;
   transition: 300ms linear;
+}
+.max-w-155 {
+  max-width: 155px;
+}
+.mt-29 {
+  margin-top: 29px;
 }
 .common-btn:hover {
   background: var(--bg-darkgray);
@@ -233,7 +262,6 @@
   padding: 10px 20px;
   border-bottom: none;
   background-color: var(--bg-darkgray) !important;
- 
 }
 .tabs div.active {
   background-color: var(--light-gray) !important;
@@ -249,7 +277,67 @@
 .tab-pane.active {
   display: block;
 }
+
+/* accordian */
+
+.bg-blue {
+  background-color: var(--color-gray);
+}
+.sub-button {
+  padding: 15px 30px;
+  font-size: 14px;
+  font-weight: 400;
+  background-color: var(--green);
+  border-style: none;
+  border-radius: 999px;
+  box-shadow: 0px 5px 15px 0px rgba(39, 48, 112, 0.51);
+  color: white;
+}
+.content-card {
+  box-shadow: 0px 4px 9px 0px rgba(1.10869565217385, 0, 255, 0.1) !important;
+  background-color: white !important;
+  border-radius: 20px;
+  /* padding: 30px !important; */
+  transform: translateY(34%);
+}
+.accordion-button {
+  padding: 14px !important;
+  background-color: var(--color-gray) !important;
+  border-radius: 0 !important;
+  color: white;
+}
+
+.accordion-item {
+  margin-top: 20px;
+  border: 0 !important;
+}
+.accordion-button:not(.collapsed) {
+  color: white !important;
+  background-color: var(--color-gray) !important;
+  box-shadow: none !important;
+}
+.accordion-button:focus {
+  box-shadow: none !important;
+}
+.accordion-body {
+  box-shadow: 0px 4px 9px 0px rgba(1.10869565217385, 0, 255, 0.1) !important;
+}
+.accordion-button.collapsed::after {
+  color: white !important;
+  background-image: url('data:image/svg+xml,%3Csvg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16"%3E%3Cpath fill="white" d="M15 8a.5.5 0 0 1-.5.5H1.5a.5.5 0 0 1 0-1h13a.5.5 0 0 1 .5.5z"/%3E%3C/svg%3E') !important;
+}
+.accordion-button:not(.collapsed)::after {
+  background-image: url('data:image/svg+xml,%3Csvg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16"%3E%3Cpath fill="white" d="M15 8a.5.5 0 0 1-.5.5H1.5a.5.5 0 0 1 0-1h13a.5.5 0 0 1 .5.5z"/%3E%3C/svg%3E') !important;
+  transform: var(--bs-accordion-btn-icon-transform);
+}
+
+.accordian-padding {
+  padding-top: 140px;
+}
 @media (max-width: 992px) {
+  .overflow-x-scroll {
+    overflow-x: scroll;
+  }
   .mobile_view {
     position: fixed;
     top: 203px;
@@ -357,6 +445,16 @@
     height: 480px;
     border-radius: 20px;
   }
+  .accordian-padding {
+    padding-top: 150px;
+  }
+  .accordion-circle {
+    width: 8px;
+    height: 8px;
+    border-radius: 8px;
+    background-color: var(--color-gray);
+  }
+
   .features-card {
     max-width: 400px;
   }
@@ -398,5 +496,16 @@
   }
   .h-210 {
     height: 210px;
+  }
+}
+@media (min-width: 1024px) {
+  .my-section::-webkit-scrollbar {
+    display: none;
+  }
+  .my-section {
+    scrollbar-width: none;
+  }
+  .my-section {
+    -ms-overflow-style: none;
   }
 }
