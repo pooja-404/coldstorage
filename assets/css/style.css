@@ -134,6 +134,7 @@
   transition: transform 0.3s, box-shadow 0.3s;
   overflow: hidden;
   background-color: #70727f;
+  height: 100%;
 }
 
 .coldstorage-card:hover {
