@@ -272,7 +272,6 @@
 }
 .tabs div.active {
   background-color: var(--light-gray) !important;
-  border-bottom: 1px solid white;
 }
 .tab-content {
   padding: 20px;
@@ -385,7 +384,7 @@
 }
 @media (max-width: 992px) {
   .overflow-x-scroll {
-    overflow-x: scroll;
+    overflow-x: scroll !important;
   }
   .mobile_view {
     position: fixed;
